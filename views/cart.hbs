@@ -1,0 +1,59 @@
+<div class="cartPage">
+    <h1>My Cart</h1>
+
+    <div id="cart">
+        {{#if cartCourses.length}}
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="icon">Course icon</th>
+                            <th>Course name</th>
+                            <th>Count</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each cartCourses}}
+                            <tr>
+                                <td>
+                                    <img class="courseImg" src="{{img}}" alt="">
+                                </td>
+                                <td>
+                                    {{title}}
+                                </td>
+                                <td>
+                                    {{count}}
+                                </td>
+                                <td>
+                                    <button class="btn btn-small js-remove" data-id="{{_id}}" data-csrf="{{@root.csrf}}">Delete</button>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+
+                <div class="bottom">
+                    <p><strong>Total price:</strong> <span class="price">{{price}}</span></p>
+
+                    <form action="/orders" method="POST">
+                        <input type="hidden" name="_csrf" value="{{csrf}}">
+
+                        <button type="submit" class="btn">Make order</button>
+                    </form>
+                </div>
+            </div>
+        {{else}}
+            <p>Cart is empty.</p>
+        {{/if}}
+    </div>
+
+    {{#if courses.length}}
+        <div class="latestCourses">
+            <h2>Our Latest courses</h2>
+            {{> courseList}}
+        </div>
+    {{else}}
+
+    {{/if}}
+</div>

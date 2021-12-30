@@ -1,0 +1,281 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    background: #0253eb;
+}
+.container.content{
+    min-height: calc(100vh - 214px);
+    padding-bottom: 50px;
+}
+.nav-wrapper{
+    padding: 0 2rem;
+}
+.price{
+    font-size: 2rem;
+}
+.course{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.course h1{
+    margin-bottom: 20px;
+}
+.course img{
+    max-width: 600px;
+    height: auto;
+}
+.course .price.big{
+    font-size: 2.5rem;
+}
+.card-action.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-form{
+    margin-bottom: 40px;
+}
+.auth{
+    padding-top: 50px;
+}
+.auth .alert,
+.resetPassword .alert,
+.addCourse .alert{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,0,0,.3);
+    color: red;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.addCourse .coursePreview,
+.courseEdit .coursePreview{
+    width: 100%;
+    height: 400px;
+    background: #f2f2f2;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+}
+.addCourse .coursePreview span,
+.courseEdit .coursePreview span{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #ccc;
+    position: absolute;
+    z-index: 1;
+}
+.addCourse .coursePreview img.preview,
+.courseEdit .coursePreview img.preview{
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+}
+.courseEdit .saveBtn{
+    padding: 0 50px;
+    margin: auto;
+    display: block;
+}
+.courseEdit .removeForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.courseEdit .removeForm h3{
+    margin-top: 10px;
+}
+.courseEdit .removeForm p{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.addCourse form{
+    display: flex;
+    flex-direction: column;
+}
+.addCourse form .btn.send{
+    margin: 50px auto 20px auto;
+}
+.addCourse form .input-field{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.courses .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.courses .row a{
+    font-size: 10px;
+    margin-right: 10px;
+}
+.courses .card .card-image,
+.latestCourses .card .card-image{
+    height: 350px;
+    width: 100%;
+    background: #f2f2f2;
+    padding: 20px;
+}
+.courses .card .card-image img,
+.latestCourses .card .card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.profile form{
+    margin-top: 45px;
+}
+.profile .row{
+    display: flex;
+    align-items: center;
+}
+.profile .avatar{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.coursePage{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.coursePage .latestCourses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.coursePage .latestCourses .row{
+    width: 100%;
+}
+.coursePage .courseContent{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.coursePage .courseContent .courseImg{
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+}
+.coursePage .courseContent .courseImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.orders .orderWrap{
+    width: 100%;
+}
+.orders .orderWrap .orderContent{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.orders .orderWrap .orderContent .row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.orders .orderWrap .orderContent .row .orderItem{
+    width: 50%;
+}
+.orders .latestCourses{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.orders .latestCourses .row{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+
+.cartPage #cart{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cartPage .latestCourses{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cartPage .latestCourses .row{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+.cartPage #cart .content{
+    width: 100%;
+    height: inherit;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.cartPage #cart table thead .icon{
+    width: 10%;
+}
+.cartPage #cart table tbody img.courseImg{
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.profile form button.btn{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.footer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222D4A;
+}
+.footer a{
+    font-size: 25px;
+    color: #fff;
+    font-family: 'UBUNTU', sans-serif;
+    font-weight: 700;
+}
+.courses .row .col{
+    margin-left: 0!important;
+    margin-right: 0!important;
+}

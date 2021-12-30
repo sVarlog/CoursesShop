@@ -1,0 +1,23 @@
+<div class="course coursePage">
+    <div class="courseContent">
+        <div class="courseImg">
+            <img src="../{{course.img}}" alt="{{course.title}}">
+        </div>
+        <h1>{{course.title}}</h1>
+        <span>Description:</span>
+        <p>{{course.desc}}</p>
+        <p class="price big">{{course.price}}</p>
+        {{#ifnoteq course.userId._id @root.userId}}
+            <form action="/cart/add" method="POST">
+                <input type="hidden" name="id" value="{{course._id}}">
+                <input type="hidden" name="_csrf" value="{{@root.csrf}}">
+                <button type="submit" class="btn btn-primary">Buy</button>
+            </form>
+        {{/ifnoteq}}
+    </div>
+
+    <div class="latestCourses">
+        <h2>Our latest courses</h2>
+        {{> courseList}}
+    </div>
+</div>

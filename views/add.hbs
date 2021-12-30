@@ -1,0 +1,46 @@
+<div class="addCourse">
+    <h1>Add new course</h1>
+    {{#if error}}
+        <p class="alert">{{error}}</p>
+    {{/if}}
+
+    <div class="coursePreview">
+        <span>Image</span>
+        <img class="preview" src="" alt="">
+    </div>
+
+    <form action="/add" method="POST" enctype="multipart/form-data" novalidate>
+        <div class="input-field">
+            <input id="title" name="title" type="text" class="validate" required value="{{data.title}}">
+            <label for="title">Course title *</label>
+            <span class="helper-text" data-error="Enter name"></span>
+        </div>
+
+        <div class="input-field">
+            <input id="price" name="price" type="number" inputmode="numeric" class="validate" required min="1" value="{{data.price}}">
+            <label for="price">Course price *</label>
+            <span class="helper-text" data-error="Enter price"></span>
+        </div>
+
+        <div class="input-field">
+            <textarea id="textarea1" name="description" class="materialize-textarea"></textarea>
+            <label for="textarea1">Course description</label>
+        </div>
+
+        <div class="input-field">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <input name="courseImage" type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload file">
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+
+        <button type="submit" class="btn btn-primary send">Add course</button>
+    </form>
+</div>
